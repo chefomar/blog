@@ -8,7 +8,7 @@ name: Omar Elshinnawey
 title: Omar Elshinnawey
 description: >
   Blog where I write anything that comes to my mind. Not necessarily technical.
-url: ""
+url: "https://blog.omardev.net"
 twitter_username: OmarAlShinnawey
 default_img: /assets/images/seo.png
 social:
@@ -25,7 +25,7 @@ social:
 author:
   - name: Omar Elshinnawey
     bio: Software Engineer, cares about open source and like to bake in my free time.
-    url: http://chefomar.github.io
+    url: https://omardev.net
 
 # Pagination settings
 pagination:
