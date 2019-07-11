@@ -177,7 +177,7 @@ For the sake of completeness, for the above two examples:
 
 - If your code inside `OnChanges` is not executing, then you mostly misunderstood what the hook is about. `OnChanges` is only executed if a data-bound property is changing. Meaning only if the value of `@Input` field changes from the parent component.
 
-## Exposing `Subject` and `BehaviorSubject` Directly
+## Exposing `Subject` and `BehaviorSubject` Directly
 
 `Subject`s and `BehaviorSubject`s are popular interaction patterns between angular components. However many developers make the mistake of "leaking" the subjects to the outside world. Many people do the following:
 
