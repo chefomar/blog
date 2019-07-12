@@ -27,7 +27,7 @@ This is one of the most commonly used component architecture in Angular. It is a
 
 Let's take an example of how these concepts are being misused.
 
-Let's say we want a dashboard screen to present few graphs and general information about. We received a wireframe and started the development. The dashboard is pretty simple: two pie charts to visualize some data and some cards. Something like the following:
+Let's say we want a dashboard screen to present few graphs and general information about the user. We received a wireframe and started the development. The dashboard is pretty simple: two pie charts to visualize some data and some cards. Something like the following:
 
 ![example dashboard wireframe](/assets/images/dashboard-example.png)
 
