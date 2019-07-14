@@ -71,3 +71,5 @@ exclude:
   - gulpfile.js
   - package.json
   - README.md
+include:
+  - _headers
