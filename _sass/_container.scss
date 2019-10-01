@@ -1,0 +1,34 @@
+@import 'mixins';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
+  padding: 10px;
+
+  &[justify="center"] {
+    justify-content: center;
+  }
+}
+
+main > *:first-child {
+  padding-top: 45px;
+}
+
+@include large {
+  .container {
+    padding-bottom: 0;
+    width: 70vw;
+  }
+
+  main > *:first-child {
+    padding-top: 50px;
+  }
+}
+
+@include xlarge {
+  main > *:first-child {
+    padding-top: 55px;
+  }
+}

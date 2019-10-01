@@ -1,0 +1,9 @@
+<article>
+  <header>
+    <h2 class="heading heading--no-margin heading--1 post-card__title">
+      <a class="post-card__link" href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
+  </header>
+  <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
+</article>

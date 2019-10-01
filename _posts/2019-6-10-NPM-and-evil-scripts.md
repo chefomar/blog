@@ -34,11 +34,13 @@ Let's take few examples of how the `postinstall` script can be used by malicious
 ## Post Install of Doom Example #1
 
 Let's try something simple. In many node applications, there is a file called `.env`. This file is most likely not committed to source control. It may hold few critical information about your environment. Let's steal it, shall we?!! I will first create a normal npm package, that literally does nothing.
+
 1. First create the package directory:
 
     ```console
     $ mkdir blog-npm-scripts && cd blog-npm-scripts
     ```
+
 2. Create a `postinstall.js` file and let's try to read the `.env` file:
 
     ```javascript
@@ -58,7 +60,9 @@ Let's try something simple. In many node applications, there is a file called `.
         console.log(data);
     });
     ```
+
     Your package is installed under `node_module/blog-npm-scripts`. The code above tries to break out of the `node_modules` directory into the root of the victim's codebase.
+
 3. Add postinstall script in `package.json`:
 
     ```json
@@ -74,6 +78,7 @@ Let's try something simple. In many node applications, there is a file called `.
       "license": "MIT"
     }
     ```
+
 4. An unsuspecting developers installs your package:
 
     ![example #1 result](/assets/images/npm-evil-scripts-result-1.png)
@@ -107,7 +112,9 @@ This time, we will use a shell script.
 
       git push origin master
     ```
+
     The script above creates a file called `.sneaky.js` in the codebase root directory then attempts to push that code to source control using the last commit message.
+
 2. Replace the `postinstall` script in `package.json`:
 
     ```json
@@ -117,6 +124,7 @@ This time, we will use a shell script.
         }
       }
     ```
+
 3. An unsuspecting developers installs your package:
     ![example #2 result](/assets/images/npm-evil-scripts-result-2.png)
     As you can see the code was pushed to Github.

@@ -1,0 +1,98 @@
+@import "variables";
+@import "mixins";
+
+.heading {
+  margin: 10px;
+  font-family: $font;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+
+  &--1 {
+    font-weight: map-get($map: $font-weights, $key: black);
+    font-size: 1.7rem;
+  }
+
+  &--2 {
+    font-weight: map-get($map: $font-weights, $key: bold);
+    font-size: 1.5rem;
+  }
+
+  &--3 {
+    font-weight: map-get($map: $font-weights, $key: black);
+    font-size: 1.3rem;
+  }
+
+  &--4 {
+    font-weight: map-get($map: $font-weights, $key: bold);
+    font-size: 1rem;
+  }
+
+  &--5 {
+    font-weight: map-get($map: $font-weights, $key: bold);
+    font-size: 0.8rem;
+  }
+
+  &--6 {
+    font-weight: map-get($map: $font-weights, $key: bold);
+    font-size: 0.8rem;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--underlined {
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+      margin: 5px auto;
+      width: 5%;
+      border-bottom: 3px solid $black;
+    }
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+h1:not(.heading) {
+  @extend .heading;
+  @extend .heading--1;
+}
+
+h2:not(.heading) {
+  @extend .heading;
+  @extend .heading--2;
+}
+
+h3:not(.heading) {
+  @extend .heading;
+  @extend .heading--3;
+}
+
+h4:not(.heading) {
+  @extend .heading;
+  @extend .heading--4;
+}
+
+h5:not(.heading) {
+  @extend .heading;
+  @extend .heading--5;
+}
+
+h6:not(.heading) {
+  @extend .heading;
+  @extend .heading--6;
+}
+
+h1:not(.heading),
+h2:not(.heading),
+h3:not(.heading),
+h4:not(.heading),
+h5:not(.heading),
+h6:not(.heading) {
+  margin: 0;
+}

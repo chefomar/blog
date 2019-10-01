@@ -1,0 +1,29 @@
+@mixin supports-hover {
+  @media not all and (hover: none) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (min-width: 300px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin xlarge {
+  @media only screen and (min-width: 1000px) {
+    @content;
+  }
+}

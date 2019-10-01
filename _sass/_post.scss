@@ -1,0 +1,47 @@
+@import "variables";
+
+.post__header {
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 20px 0;
+    width: 50%;
+    border-bottom: 3px solid $black;
+  }
+}
+
+.post__title {
+  color: $navy;
+}
+
+.post__date {
+  font-family: $font;
+}
+
+.post__content {
+  font-family: $font;
+  line-height: 1.7;
+}
+
+@include medium {
+  .post__header {
+    &::after {
+      margin: 20px 0 20px 10px;
+    }
+  }
+
+  .post__title {
+    margin: 10px;
+  }
+
+  .post__date {
+    margin: 0 10px;
+  }
+
+  .post__content {
+    margin: 10px;
+  }
+}
