@@ -5,6 +5,6 @@ title: Blog
 
 <div class="container">
     {% for post in site.posts %}
-        {% include post_card.html %}
+        {% include post_card.html first=forloop.first %}
     {% endfor %}
 </div>

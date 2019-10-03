@@ -21,7 +21,7 @@
     margin: 0;
     padding: 10px;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: map-get($map: $font-weights, $key: bold);
   }
 
   .navbar {
