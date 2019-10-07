@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 10px;
+  background-color: $navy;
+  font-family: $font;
+  color: $silver;
+
+  &__description {
+    margin: 10px;
+    font-size: 0.8rem;
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    margin: 10px;
+    color: $silver;
+    text-decoration: none;
+  }
+}
+
+@include large {
+  .footer {
+    padding: 50px 15vw;
+
+    &__summary,
+    &__contact {
+      padding: 0 10px;
+    }
+  }
+}
+
+@include xlarge {
+  .footer {
+    &__summary {
+      width: 40vw;
+    }
+
+    &__contact {
+      flex-direction: column;
+    }
+  }
+}

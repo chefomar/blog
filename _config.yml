@@ -10,6 +10,10 @@ github_username:  chefomar
 name: Omar Elshinnawey
 default_img: /assets/images/seo.png
 website: https://omardev.net
+twitter_url: https://twitter.com/OmarAlShinnawey
+linkedin_url: https://www.linkedin.com/in/omarelshinnawey
+github_url: https://github.com/chefomar
+stackoverflow_url: https://stackoverflow.com/users/6152831/omar
 
 # Build settings
 plugins:
