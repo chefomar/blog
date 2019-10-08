@@ -1,0 +1,20 @@
+@import "./mixins";
+
+html,
+body {
+  font-size: 100%;
+}
+
+@include medium {
+  html,
+  body {
+    font-size: 113%;
+  }
+}
+
+@include large {
+  html,
+  body {
+    font-size: 125%;
+  }
+}

@@ -1,17 +1,10 @@
-<!-- The footer at the very bottom of the screen -->
-<footer class="footer section-padding">
-    <div class="footer__container">
-      {% tags_list :threshold => 1, :sort_by => count, :order_by => desc, :limit => 5 %}
-
-      {% include social.html %}
-    </div>
+<footer class="footer">
+  <div class="footer__summary">
+    <h3 class="heading heading--3">{{ site.name }}</h3>
+    <p class="footer__description">{{ site.description }}</p>
+  </div>
+  <div class="footer__contact">
+    <a class="footer__link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    {% include social.html %}
   </div>
 </footer>
-
-{% if paginator.next_page %}
-  <script>
-    var maxPages = parseInt('{{ paginator.total_pages }}');
-  </script>
-{% endif %}
-
-<script src="{{ '/assets/js/app.min.js' | prepend: site.baseurl }}"></script>

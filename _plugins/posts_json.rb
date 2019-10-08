@@ -15,7 +15,7 @@ module Jekyll
 
         MINIFY_REGEX = %r!(?<=>\n|})\s+!.freeze
 
-        def source_path(file = "posts.json")
+        def source_path(file = "posts.template")
             File.expand_path "./#{file}", __dir__
         end
 
@@ -26,8 +26,8 @@ module Jekyll
 
             site.posts.docs.each do |post|
                 postsMap["posts"] << {
-                    "title" => post.title,
-                    "summary" => post.excerpt
+                    "title" => post.data["title"],
+                    "summary" => post.data["excerpt"]
                 }
             end
 

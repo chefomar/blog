@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+
+.post-card {
+  padding-top: 20px;
+}
+
+.post-card[first=true] {
+  padding-top: 40px;
+}
+
+.post-card__title {
+  margin: 10px 0;
+}
+
+.post-card__link {
+  color: $navy;
+  text-decoration: none;
+}
+
+.post-card__date {
+  color: $black;
+  font-family: $font;
+  font-size: 0.8rem;
+}
+
+.post-card__summary {
+  margin: 15px 0;
+  font-family: $font;
+  font-size: 1rem;
+}
+
+@include medium {
+  .post-card__title {
+    margin: 10px;
+  }
+
+  .post-card__date {
+    margin: 10px
+  }
+
+  .post-card__summary {
+    margin: 15px 10px;
+  }
+}
