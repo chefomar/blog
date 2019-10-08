@@ -3,12 +3,15 @@
 .social-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  font-family: $font;
+  font-size: 0.8rem;
 }
 
 .social__link {
   text-decoration: none;
-  color: black;
+  color: $black;
   margin: 0 10px;
 }
 
@@ -24,4 +27,9 @@
   width: 25px;
   height: 25px;
   fill: $silver;
+  vertical-align: middle;
+
+  &--light {
+    fill: $black;
+  }
 }
