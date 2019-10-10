@@ -3,6 +3,7 @@
 
 .post-card {
   padding-top: 20px;
+  text-decoration: none;
 }
 
 .post-card[first=true] {
@@ -11,11 +12,7 @@
 
 .post-card__title {
   margin: 10px 0;
-}
-
-.post-card__link {
   color: $navy;
-  text-decoration: none;
 }
 
 .post-card__date {
@@ -26,6 +23,7 @@
 
 .post-card__summary {
   margin: 15px 0;
+  color: $black;
   font-family: $font;
   font-size: 1rem;
 }
