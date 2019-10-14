@@ -1,9 +1,11 @@
-<article class="post-card" first="{{include.first}}">
-  <header>
-    <h2 class="heading heading--no-margin heading--1 post-card__title">
-      <a class="post-card__link" href="{{ post.url }}">{{ post.title }}</a>
-    </h2>
-    <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
-  </header>
-  <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
-</article>
+<a class="post-card" href="{{ post.url }}" {% if include.first %} first="{{include.first}}" {% endif %}>
+  <article>
+    <header>
+      <h2 class="heading heading--no-margin heading--1 post-card__title">
+        {{ post.title }}
+      </h2>
+      <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
+    </header>
+    <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
+  </article>
+</a>
