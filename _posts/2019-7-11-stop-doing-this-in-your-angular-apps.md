@@ -7,6 +7,7 @@ tags:
   - Typescript
   - Angular
   - rxjs
+  - frontend
 ---
 
 Throughout the past two years, I have seen some Angular developers making few mistakes and abusing common design patterns. These are some of the few mistakes I have seen and few recommendations to make your Angular apps look better.
