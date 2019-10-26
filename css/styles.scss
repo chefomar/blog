@@ -18,6 +18,12 @@ img {
     margin: auto;
 }
 
+blockquote {
+    text-align: center;
+    font-weight: bold;
+    
+}
+
 @import '_sass/headings';
 @import '_sass/default-fonts';
 @import '_sass/header';
