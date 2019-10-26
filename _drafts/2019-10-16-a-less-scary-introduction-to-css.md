@@ -85,6 +85,7 @@ Specificity can be explained in 4 basic categories, arranged from most specific 
       color: blue;
     }
     ```
+
     The resulting text will have a red color:
 
     <!-- insert image here -->
@@ -114,7 +115,45 @@ Specificity can be explained in 4 basic categories, arranged from most specific 
 
 For rules with equal specificity, the latest rule will be counted.
 
-This is CSS specificity in a high-level. For more elaborate examples of how to calculate CSS specificity, read [Emma Wedekind's CSS Specificity](https://dev.to/emmawedekind/css-specificity-1kca).
+This is CSS specificity in a high-level. For more elaborate examples to understand and calculate CSS specificity, read [this excelent article](https://dev.to/emmawedekind/css-specificity-1kca).
 
 ## The box model
+
+Browsers render every element as a box. If you ever tried to inspect an element in a browser, you probably saw something that looks like this:
+
+![CSS box model](/assets/images/box_model.png)
+
+As you see in the picture, the box model consists of 4 different areas:
+
+- Margin
+- Border
+- Padding
+- Content
+
+Understanding the box model allows you to build accurate layouts. By default, when you set the height and width of an element, you are only setting the the `content` height and width. To Calculate the total height or width of an element, you must consider all 4 areas. For example:
+
+```css
+h1 {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+}
+```
+
+The total width of the element = (10 * 2) + (1 * 2) + (5 * 2) + 100 = 132px. Margin, border and padding are multiplied by 2 to consider both left and right.
+
+You can change this behavior by changing the value of the `box-sizing` property. By default, `box-sizing` value is set to `content-box`, which makes the browser behave as explained above. The other value of the `box-sizing` property is `border-box`. `border-box` includes both border and padding into the width calculation. For example:
+
+```css
+h1 {
+  box-sizing: border-box;
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  width: 100px;
+}
+```
+
+The total width of the elment = (10 * 2) + 100 = 120px. But where did the border and padding go? Well, because the `box-sizing` is set to `border-box`, the browser determined that the width of the element includes both the border and padding. If you inspect the element, you will find that the content area width is 88px **(not 100)** with 1px border and 5px padding in each side.
 
