@@ -53,11 +53,11 @@ export class DashboardSmart {
     }
 }
 ```
-
+<br/>
 ```html
 <app-dashboard-dumb [dashboardInfo]="dashboardInfo"></app-dashboard-dumb>
 ```
-
+<br/>
 ```typescript
 // dashboard-dumb.component.ts
 import { Component, Input } from '@angular/core';
@@ -70,7 +70,7 @@ export class DashboardSmart {
     @Input() dashboardInfo;
 }
 ```
-
+<br/>
 ```html
 <div>
     <div>
