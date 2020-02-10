@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why Static Code Analyzers are Not Engough"
+title:  "Why Static Code Analyzers are Not Enough"
 date:   2020-02-10 22:45:13 +0300
 tags:
   - Software
