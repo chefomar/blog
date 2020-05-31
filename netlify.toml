@@ -4,3 +4,9 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET"
+
+[[redirects]]
+  from = "https://omardev.net/*"
+  to = "https://blog.omardev.net/:splat"
+  status = 301
+  force = true
