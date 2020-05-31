@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Less Scary Introduction to CSS, Part 1"
+title:  "A Less Scary Introduction to CSS"
 image: 
 date: 2019-10-27 22:33:13 +0300
 tags:
@@ -199,4 +199,4 @@ For a more comprehensive guide into CSS units and percentages, you can take a lo
 
 ## Conclusion
 
-CSS is vast and has a lot to uncover. It takes time to learn and master. You will need to do a lot of reading and practice. Once you start to get the hang of it, you will enjoy building beautiful sites with amazing layouts. This is a part of a series and there is a lot that I wanted to write about but I did not want to over-stuff it in a single post.
+CSS is vast and has a lot to uncover. It takes time to learn and master. You will need to do a lot of reading and practice. Once you start to get the hang of it, you will enjoy building beautiful sites with amazing layouts. There is a lot that I wanted to write about but I did not want to over-stuff it in a single post.
