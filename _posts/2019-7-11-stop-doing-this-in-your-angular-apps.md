@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Stop Doing this in Your Angular Apps!"
-image: /assets/images/angular.png
 date:   2019-07-11 20:00:00 +0300
 tags:
   - Typescript

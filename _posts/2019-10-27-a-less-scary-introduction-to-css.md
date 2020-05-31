@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "A Less Scary Introduction to CSS"
-image: 
 date: 2019-10-27 22:33:13 +0300
 tags:
   - frontend

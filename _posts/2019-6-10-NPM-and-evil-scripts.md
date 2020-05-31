@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "NPM and Evil Scripts"
-image: 
 date:   2019-06-10 01:04:13 +0300
 tags:
   - NPM
