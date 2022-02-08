@@ -1,9 +1,9 @@
 <a class="post-card" href="{{ post.url }}" {% if include.first %} first="{{include.first}}" {% endif %}>
   <article>
     <header>
-      <h2 class="heading heading--no-margin heading--1 post-card__title">
+      <h1 class="heading heading--no-margin heading--1 post-card__title">
         {{ post.title }}
-      </h2>
+      </h1>
       <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
     </header>
     <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
