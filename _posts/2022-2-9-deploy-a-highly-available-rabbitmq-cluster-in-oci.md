@@ -29,7 +29,7 @@ There are four primary concerns when deploying RabbitMQ to OCI: Number of nodes,
 
 In our example, we are going to use the following:
 
-- Number of instances: 3. Note that RabbitMQ recommends that clusters be deployed with an odd node count. This allows RabbitMQ nodes to reach a majority consensus and elect a leader in the cluster.
+- Number of instances: 3. RabbitMQ recommends that clusters be deployed with an odd node count. This allows RabbitMQ nodes to reach a majority consensus and elect a leader in the cluster.
 - Node Shape: VM.Standard.E3.Flex	with 1 OCPU and 4 GBs of RAM. This gives us 2 vCPUs and 1 Gbps of bandwidth. You can choose larger shapes depending on your environment. Note that increasing the number of OCPUs gives you more network bandwidth.
 - Storage Performance: In our example, we are going to create 3 block volumes and attach them to the 3 instances. We are going to choose the balanced performance level with a volume size of 50 GB. This gives us 3000 IOPS and 24 MB/s of throughput. In larger environments, you may want to increase the block performance depending on your need. You may also want to attach multiple volumes per instance to separate RabbitMQ Logs IOPS and maximize Data IOPS. Note that the size of the volume also affects its performance. Do not forget to create the appropriate backup policies for these volumes in your production environment.
 - Operating System: We are going to use Oracle Linux 8.
@@ -93,7 +93,7 @@ In our example, we are going to use the following:
 
         ![Instance Creation](/assets/images/rabbitmq-oci/create-instance-3.png)
 
-3. In each of the VMs, attach the block volumes:
+3. In each of the instances, attach the block volumes:
 
     ![Attach block volume from the cloud console](/assets/images/rabbitmq-oci/attach-block-volume.png)
 
@@ -127,7 +127,7 @@ In our example, we are going to use the following:
     - To verify, execute `df -h`:
         ![df -h output](/assets/images/rabbitmq-oci/dfh.png)
 
-    - Repeat this step for all three servers.
+    - Repeat these steps for all three servers.
 
 ## Installing & Configuring RabbitMQ
 1. Generate certificates for each server node using [this guide](https://www.rabbitmq.com/ssl.html#manual-certificate-generation) and upload them to the instances.
@@ -196,7 +196,7 @@ In our example, we are going to use the following:
     ```
 
 14. Repeat in RabbitMQ server 3.
-15. Execute `rabbitmqctl cluster_status` in all three VMs, you should get similar output as the below:
+15. Execute `rabbitmqctl cluster_status` in all three instances, you should get similar output as the below:
 
     ![Cluster status](/assets/images/rabbitmq-oci/cluster-status.png)
 
