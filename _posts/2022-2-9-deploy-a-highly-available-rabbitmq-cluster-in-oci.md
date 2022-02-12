@@ -70,7 +70,7 @@ In our example, we are going to use the following:
 7. Create the three subnets displayed in the diagram above. The public subnet is the only subnet that should be public. I chose the following CIDR blocks for my subnets:
     - Public Subnet: 10.0.0.0/24
     - Bastion Subnet: 10.0.1.0/24
-    - RabbitMQ Subnet: 10.0.0.0/24
+    - RabbitMQ Subnet: 10.0.2.0/24
 
 ## Creating Instances & Block Volumes
 
@@ -86,6 +86,10 @@ In our example, we are going to use the following:
         ![Instance Creation](/assets/images/rabbitmq-oci/create-instance-1.png)
 
     - Edit the shape to select the shape of your choosing:
+
+        ![Instance Creation](/assets/images/rabbitmq-oci/instance-shape.PNG)
+
+    - Choose the subnet and assign the network security group:
 
         ![Instance Creation](/assets/images/rabbitmq-oci/create-instance-2.png)
 
