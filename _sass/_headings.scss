@@ -42,19 +42,31 @@
   }
 
   &--underlined {
-    margin-bottom: 20px;
-
     &::after {
       content: "";
       display: block;
-      margin: auto;
-      width: 5%;
+      margin-top: 10px;
+      width: 20%;
       border-bottom: 3px solid $black;
+    }
+
+    &--navy::after {
+      border-color: $navy;
     }
   }
 
   &--no-margin {
     margin: 0;
+  }
+}
+
+@include large {
+  .heading {
+    &--underlined {
+      &::after {
+        width: 5%;
+      }
+    }
   }
 }
 

@@ -12,6 +12,17 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    main {
+        flex-grow: 1;
+    }
+}
+
 img {
     max-width: 100%;
     display: block;
