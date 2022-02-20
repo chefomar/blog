@@ -25,8 +25,40 @@
   font-family: $font;
   line-height: 1.7;
 
+  h1 {
+    @extend .heading;
+    @extend .heading--1;
+  }
+
+  h2 {
+    @extend .heading;
+    @extend .heading--2;
+  }
+
+  h3 {
+    @extend .heading;
+    @extend .heading--3;
+  }
+
+  h4 {
+    @extend .heading;
+    @extend .heading--4;
+  }
+
+  h5 {
+    @extend .heading;
+    @extend .heading--5;
+  }
+
+  h6 {
+    @extend .heading;
+    @extend .heading--6;
+  }
+
   h1,h2,h3,h4,h5,h6 {
     color: $navy;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
