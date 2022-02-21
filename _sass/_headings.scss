@@ -1,6 +1,19 @@
 @import "variables";
 @import "mixins";
 
+[theme="dark"] {
+
+  .heading {
+
+    &--underlined {
+
+      &::after {
+        border-color: $mid-gray;
+      }
+    }
+  }
+}
+
 .heading {
   margin: 10px;
   font-family: $font;
@@ -47,11 +60,7 @@
       display: block;
       margin-top: 10px;
       width: 20%;
-      border-bottom: 3px solid $black;
-    }
-
-    &--navy::after {
-      border-color: $navy;
+      border-bottom: 3px solid $navy;
     }
   }
 

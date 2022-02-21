@@ -1,6 +1,8 @@
 ---
 ---
 
+@import 'variables';
+
 * {
     box-sizing: border-box;
 }
@@ -20,7 +22,12 @@ body {
 
     main {
         flex-grow: 1;
+        padding-bottom: 20px;
     }
+}
+
+[theme="dark"] main {
+    background-color: darken($color: $navy, $amount: 5%);
 }
 
 img {

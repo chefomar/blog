@@ -1,6 +1,15 @@
 @import "variables";
 
+
+[theme="dark"] {
+
+  .not-found {
+    color: $mid-gray;
+  }
+}
+
 .not-found {
   text-align: center;
   font-family: $font;
+  color: $black;
 }

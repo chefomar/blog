@@ -10,6 +10,21 @@
   padding-top: 40px;
 }
 
+[theme="dark"] {
+
+  .post-card__title {
+    color: $mid-gray;
+  }
+
+  .post-card__date {
+    color: $light-gray;
+  }
+
+  .post-card__summary {
+    color: $light-gray;
+  }
+}
+
 .post-card__title {
   margin: 10px 0;
   color: $navy;

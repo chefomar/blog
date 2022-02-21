@@ -1,5 +1,31 @@
 @import "variables";
 
+[theme="dark"] {
+  
+  .post__header {
+
+    &::after {
+      border-color: $mid-gray;
+    }
+  }
+
+  .post__title, .post__date {
+    color: $mid-gray;
+  }
+
+  .post__content {
+    color: $light-gray;
+
+    h1,h2,h3,h4,h5,h6 {
+      color: $mid-gray;
+    }
+
+    a {
+      color: $light-blue-3;
+    }
+  }
+}
+
 .post__header {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -59,6 +85,10 @@
     color: $navy;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  a {
+    color: darken($color: $blue, $amount: 5%);
   }
 }
 

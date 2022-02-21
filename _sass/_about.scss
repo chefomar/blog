@@ -1,6 +1,31 @@
 @import "variables";
 @import "mixins";
 
+[theme="dark"] {
+
+  .section {
+
+    &__title {
+      color: $mid-gray;
+    }
+
+    &__content {
+      color: $light-gray;
+
+      .content__link {
+        color: $light-blue-3;
+      }
+    }
+  }
+
+  .introduction {
+
+    &__text {
+      color: $light-gray;
+    }
+  }
+}
+
 .section {
   margin-top: 30px;
   font-family: $font;
@@ -15,7 +40,7 @@
     font-size: 1rem;
 
     .content__link {
-      text-decoration: none;
+      text-decoration: underline;
       color: darken($color: $blue, $amount: 5%);
     }
   }
