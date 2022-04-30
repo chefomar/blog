@@ -42,6 +42,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - about.html
 
 sass:
   style: compressed
