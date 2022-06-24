@@ -6,7 +6,13 @@
     Access-Control-Allow-Methods = "GET"
 
 [[redirects]]
-  from = "https://*omardev.net/*"
+  from = "https://omardev.net/*"
+  to = "https://omaread.me/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://blog.omardev.net/*"
   to = "https://omaread.me/:splat"
   status = 301
   force = true
