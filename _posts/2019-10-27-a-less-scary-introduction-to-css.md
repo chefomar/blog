@@ -2,6 +2,7 @@
 layout: post
 title:  "A Less Scary Introduction to CSS"
 date: 2019-10-27 22:33:13 +0300
+category: technology
 tags:
   - frontend
   - css

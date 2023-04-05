@@ -1,0 +1,25 @@
+.posts-preview {
+    display: grid;
+    column-count: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+@include xlarge {
+    .posts-preview {
+        column-gap: 50px;
+        column-count: 2;
+        width: 80vw;
+        margin: auto;
+    }
+}
+
+.white-container {
+    background-color: $white;
+
+    .posts-preview {
+        :first-child {
+            border: none;
+        }
+    }
+}

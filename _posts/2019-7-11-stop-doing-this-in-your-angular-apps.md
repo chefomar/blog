@@ -2,6 +2,7 @@
 layout: post
 title:  "Stop Doing this in Your Angular Apps!"
 date:   2019-07-11 20:00:00 +0300
+category: technology
 tags:
   - Typescript
   - Angular

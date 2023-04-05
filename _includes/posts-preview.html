@@ -1,0 +1,15 @@
+<div class="posts-preview">
+    {% for post in site.posts limit: 4 %}
+        {% include post_card.html first=forloop.first index=forloop.index %}
+    {% endfor %}
+</div>
+
+<div class="white-container">
+    <div class="posts-preview">
+        {% for post in site.posts %}
+            {% unless forloop.index <= 4 %}
+                {% include post_card.html theme="light" border="{{ forloop.index == 5 }}" %}
+            {% endunless %}
+        {% endfor %}
+    </div>
+</div>

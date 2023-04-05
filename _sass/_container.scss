@@ -2,32 +2,39 @@
 
 .container {
   display: flex;
-  flex-direction: column;
   margin: auto;
   padding: 10px;
+  width: 100%;
+
+  &[no-space] {
+    padding: 0;
+    margin: 0;
+  }
+
+  &[direction="column"] {
+    flex-direction: column;
+  }
 
   &[justify="center"] {
     justify-content: center;
   }
-}
 
-main > *:first-child {
-  padding-top: 45px;
+  &[justify="space-between"] {
+    justify-content: space-between;
+  }
+
+  &[align="center"] {
+    align-items: center;
+  }
+
+  &[wrap] {
+    flex-wrap: wrap;
+  }
 }
 
 @include large {
   .container {
     padding-bottom: 0;
     width: 70vw;
-  }
-
-  main > *:first-child {
-    padding-top: 50px;
-  }
-}
-
-@include xlarge {
-  main > *:first-child {
-    padding-top: 55px;
   }
 }

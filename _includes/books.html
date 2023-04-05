@@ -1,0 +1,12 @@
+<div class="books" theme="{{include.theme}}">
+    <h2 class="heading heading--2 books__title">{{include.title}}</h2>
+
+    <div class="books__grid">
+        {% for book in include.books %}
+            <div class="book">
+                <img src="{{book.image}}" alt="{{book.title}}" max-width="100%" height="200px">
+                <h3 class="heading heading--3">{{book.title}}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>

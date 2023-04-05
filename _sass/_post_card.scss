@@ -3,44 +3,64 @@
 
 .post-card {
   padding-top: 20px;
+  padding-bottom: 40px;
   text-decoration: none;
-}
+  border-top: 1px solid $gray;
 
-.post-card[first=true] {
-  padding-top: 40px;
-}
-
-[theme="dark"] {
-
-  .post-card__title {
-    color: $mid-gray;
+  &[theme="light"] {
+    .post-card__title,
+    .post-card__date,
+    .post-card__summary {
+      color: $black;
+    }
   }
 
-  .post-card__date {
-    color: $light-gray;
+  &[first=true] {
+    border: none;
   }
 
-  .post-card__summary {
-    color: $light-gray;
+  &:not([first=true]) {
+    article {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      
+      & .heading {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.post-card--inverted {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  text-decoration: none;
+  border-top: 1px solid $gray;
+
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 }
 
 .post-card__title {
   margin: 10px 0;
-  color: $navy;
+  color: $mid-gray;
 }
 
 .post-card__date {
-  color: $black;
+  color: $light-gray;
   font-family: $font;
   font-size: 0.8rem;
 }
 
 .post-card__summary {
   margin: 15px 0;
-  color: $black;
+  color: $light-gray;
   font-family: $font;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 @include medium {
@@ -54,5 +74,66 @@
 
   .post-card__summary {
     margin: 15px 10px;
+  }
+}
+
+@include large {
+  .post-card[first=true] {
+    article {
+      display: flex;
+
+      & .heading {
+        font-size: 1.3rem;
+      }
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  .post-card__summary {
+    font-size: 1rem;
+  }
+
+  .post-card:not([first=true]) {
+    article {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      
+      & .heading {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+
+@include xlarge {
+
+  .post-card[first=true] {
+    grid-column-start: 1;
+    grid-row: span 3;
+
+    article {
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+
+      & .heading {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .post-card:not([first=true]) {
+    grid-column-start: 2;
+  }
+
+  .post-card[index="2"] {
+    border: none;
   }
 }

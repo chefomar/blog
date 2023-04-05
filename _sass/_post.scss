@@ -1,55 +1,57 @@
 @import "variables";
 
-[theme="dark"] {
-  
-  .post__header {
-
-    &::after {
-      border-color: $mid-gray;
-    }
-  }
-
-  .post__title, .post__date {
-    color: $mid-gray;
-  }
-
-  .post__content {
-    color: $light-gray;
-
-    h1,h2,h3,h4,h5,h6 {
-      color: $mid-gray;
-    }
-
-    a {
-      color: $light-blue-3;
-    }
-  }
-}
-
 .post__header {
   margin-top: 50px;
   margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &::after {
     content: "";
     display: block;
     margin: 50px 0;
     width: 50%;
-    border-bottom: 3px solid $navy;
+    border-bottom: 3px solid $mid-gray;
+  }
+}
+
+.post__body {
+  padding: 20px;
+
+  .splide {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slide__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .splide__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img {
+    max-height: 80vh;
   }
 }
 
 .post__title {
-  color: $navy;
+  color: $mid-gray;
 }
 
 .post__date {
   font-family: $font;
+  color: $mid-gray;
 }
 
 .post__content {
   font-family: $font;
   line-height: 1.7;
+  background-color: $white;
 
   h1 {
     @extend .heading;
@@ -82,7 +84,7 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    color: $navy;
+    color: $black;
     margin-left: 0;
     margin-right: 0;
   }
@@ -92,22 +94,19 @@
   }
 }
 
-@include medium {
+@include xlarge {
+  .post__body,
   .post__header {
-    &::after {
-      margin: 25px 0 50px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+  }
+
+  .post__body {
+  
+    .splide {
+      padding-left: 3em;
+      padding-right: 3em;
     }
-  }
-
-  .post__title {
-    margin: 10px;
-  }
-
-  .post__date {
-    margin: 0 10px;
-  }
-
-  .post__content {
-    margin: 10px;
   }
 }

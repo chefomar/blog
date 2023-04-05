@@ -19,15 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
-    main {
-        flex-grow: 1;
-        padding-bottom: 20px;
-    }
 }
 
-[theme="dark"] main {
-    background-color: darken($color: $navy, $amount: 5%);
+main {
+    background-color: $black;
 }
 
 img {
@@ -41,14 +36,15 @@ blockquote {
     font-weight: bold;
 }
 
+@import 'splide-sea-green.min.css';
 @import '_sass/headings';
 @import '_sass/default-fonts';
 @import '_sass/header';
-@import '_sass/footer';
+@import '_posts-preview';
+@import '_books';
 @import '_sass/social';
 @import '_sass/container';
 @import '_sass/post_card';
 @import '_sass/post';
 @import '_sass/highlighter';
-@import '_sass/about';
 @import '_sass/404';

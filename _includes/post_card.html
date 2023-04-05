@@ -1,11 +1,23 @@
-<a class="post-card" href="{{ post.url }}" {% if include.first %} first="{{include.first}}" {% endif %}>
+<a class="post-card" href="{{ post.url }}" 
+  {% if include.first %} first="{{include.first}}" {% endif %} 
+  index="{{include.index}}"
+  {% if include.theme %} theme="{{include.theme}}" {% endif %}
+  border="{{include.border}}">
   <article>
-    <header>
-      <h1 class="heading heading--no-margin heading--1 post-card__title">
-        {{ post.title }}
-      </h1>
-      <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
-    </header>
-    <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
+    {% if post.image %}
+        <img src="{{post.image}}" alt="{{post.title}}" {% if include.first!=true %} width="40%" {% endif %}>
+    {% endif %}
+    <div>
+      <header>
+        <small class="post-card__date">{{ post.date | date: '%B %d, %Y' }}</small>
+  
+        <h1 class="heading heading--no-margin heading--1 post-card__title">
+          {{ post.title }}
+        </h1>
+      </header>
+      {% if include.first %}
+        <p class="post-card__summary">{{ post.excerpt | strip_html }}</p>
+      {% endif %}
+    </div>
   </article>
 </a>
