@@ -3,6 +3,7 @@ layout: post
 title:  "Network Routing in Oracle Cloud Infrastructure"
 image: /assets/images/oci-routing/seo.png
 date:   2022-02-20 03:25:13 +0300
+category: technology
 tags:
   - Oracle Cloud Infrastructure
   - Networking

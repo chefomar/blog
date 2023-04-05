@@ -3,6 +3,7 @@ layout: post
 title:  "Deploy and Secure a Highly Available RabbitMQ Cluster in OCI"
 image: /assets/images/rabbitmq-oci/seo.png
 date:   2022-02-09 03:25:13 +0300
+category: technology
 tags:
   - Oracle Cloud Infrastructure
   - RabbitMQ

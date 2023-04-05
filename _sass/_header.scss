@@ -1,46 +1,19 @@
 @import "variables";
 @import "mixins";
 
-[theme="dark"] {
-
-  .header {
-    background-color: darken($color: $navy, $amount: 5%);;
-
-    &__title {
-      color: $mid-gray;
-    }
-
-    .navbar {
-
-      &__link {
-        color: $light-gray;
-      }
-
-      .lights {
-        &__icon {
-          fill: $light-gray;
-        }
-      }
-    }
-  }
-}
-
 .header {
   width: 100%;
-  height: 45px;
-  position: fixed;
-  top: 0;
-  right: 0;
+  height: 80px;
   border-bottom: 1px solid $gray;
   z-index: 1;
   font-family: $font;
-  background-color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: $black;
 
   &__title {
-    color: $black;
+    color: $mid-gray;
     text-decoration: none;
     margin: 0;
     padding: 10px;
@@ -48,21 +21,30 @@
     font-weight: map-get($map: $font-weights, $key: bold);
   }
 
+  &__container {
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .navbar {
     padding: 0;
     margin: 0;
     height: 100%;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
 
     &__link {
+      color: $light-gray;
       text-align: center;
       padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      color: $black;
       font-family: $font;
       text-decoration: none;
       font-size: 0.8rem;
@@ -70,44 +52,22 @@
       border: none;
       cursor: pointer;
     }
-
-    .lights {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      font-size: 0.8rem;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      width: 44px;
-      position: relative;
-
-      &__icon {
-        position: absolute;
-        transform: translateX(24px);
-        opacity: 0;
-        transition: opacity .5s, transform .5s;
-      }
-
-      &__icon--active {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-  }
-}
-
-@include large {
-  .header {
-    height: 50px;
   }
 }
 
 @include xlarge {
   .header {
-    height: 55px;
+    &__container {
+      padding-bottom: 0;
+      width: 80vw;
+    }
   }
 }
 
+@include media($min-width: 370px) {
+  .header {
+    .navbar {
+      display: flex;
+    }
+  }  
+}

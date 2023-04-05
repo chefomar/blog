@@ -2,6 +2,7 @@
 layout: post
 title:  "NPM and Evil Scripts"
 date:   2019-06-10 01:04:13 +0300
+category: technology
 tags:
   - NPM
   - Javascript

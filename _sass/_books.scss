@@ -1,0 +1,78 @@
+.books {
+    width: 100%;
+    padding: 10px;
+
+    &__title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .book {
+            width: 45%;
+
+            img {
+                margin: 0;
+            }
+
+            .heading {
+                font-size: 0.8rem;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+.books[theme="dark"] {
+    background-color: $black;
+
+    .books__title {
+        color: $light-gray;
+    }
+
+    .book {
+        .heading {
+            color: $light-gray;
+        }
+    }
+}
+
+.books[theme="yellow"] {
+    background-color: $yellow;
+
+    .books__title {
+        color: $black;
+    }
+
+    .book {
+        .heading {
+            color: $black;
+        }
+    }
+}
+
+@include large {
+    .books {
+        &__title {
+            width: 80vw;
+        }
+
+        &__grid {
+            width: 80vw;
+            margin: auto
+        }
+
+        .book {
+            width: 19%;
+            margin: 3% 0;
+
+            .heading {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

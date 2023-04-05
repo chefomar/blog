@@ -2,15 +2,14 @@
 layout: default
 ---
 
-<div class="container">
-  <article>
-    <header class="post__header">
-      <h1 class="post__title heading heading--1 heading--no-margin">{{ page.title }}</h1>
-      <p class="post__date">{{ page.date | date: '%B %d, %Y' }}</p>
-    </header>
-    <div class="post__content">
+<article>
+  <header class="post__header">
+    <h1 class="post__title heading heading--1 heading--no-margin">{{ page.title }}</h1>
+    <p class="post__date">{{ page.date | date: '%B %d, %Y' }}</p>
+  </header>
+  <div class="post__content">
+    <div class="post__body">
       {{content}}
     </div>
-  </article>
-  {% include share.html %}
-</div>
+  </div>
+</article>

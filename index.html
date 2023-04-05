@@ -1,10 +1,26 @@
 ---
 layout: default
-title: Blog
+title: Blog | Omar Elshinnawey
+reading:
+    - title: Permutation City
+      image: /assets/images/books/permutation%20city.jpg
+    - title: "Dare to Lead: Brave Work. Tough Conversations. Whole Hearts."
+      image: "/assets/images/books/dare-to-lead.jpg"
+    - title: A Little Life
+      image: "/assets/images/books/a-little-life.jpg"
+highlights:
+    - title: Atomic Habits
+      image: "/assets/images/books/atomic-habits.jpg"
+    - title: Brain Rules
+      image: "/assets/images/books/brain-rules.jpg"
+    - title: Frontend Architecture for Design Systems
+      image: "/assets/images/books/fe-architecture.jpg"
+    - title: Technology Strategy Patterns
+      image: "/assets/images/books/tech-strategy.jpg"
 ---
 
-<div class="container">
-    {% for post in site.posts %}
-        {% include post_card.html first=forloop.first %}
-    {% endfor %}
-</div>
+{% include posts-preview.html %}
+
+{% include books.html books=page.reading theme="dark" title="Reading" %}
+
+{% include books.html books=page.highlights theme="yellow" title="Library Highlights" %}

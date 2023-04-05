@@ -1,0 +1,15 @@
+<section class="splide" id="{{include.title}}">
+    <div class="splide__track">
+        <ul class="splide__list">
+            {% for image in include.images %}
+            <li class="splide__slide">
+                <div class="splide__slide__container">
+                    <img src="{{image.url}}"
+                        alt="{{image.description}}" />
+                    <p class="slide__title">{{image.description}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
