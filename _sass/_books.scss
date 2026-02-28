@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .books {
     width: 100%;
     padding: 10px;
@@ -28,34 +31,34 @@
 }
 
 .books[theme="dark"] {
-    background-color: $black;
+    background-color: variables.$black;
 
     .books__title {
-        color: $light-gray;
+        color: variables.$light-gray;
     }
 
     .book {
         .heading {
-            color: $light-gray;
+            color: variables.$light-gray;
         }
     }
 }
 
 .books[theme="yellow"] {
-    background-color: $yellow;
+    background-color: variables.$yellow;
 
     .books__title {
-        color: $black;
+        color: variables.$black;
     }
 
     .book {
         .heading {
-            color: $black;
+            color: variables.$black;
         }
     }
 }
 
-@include large {
+@include mixins.large {
     .books {
         &__title {
             width: 80vw;

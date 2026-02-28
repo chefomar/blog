@@ -1,17 +1,18 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables';
+@use 'mixins';
+@use "headings";
 
 .post-card {
   padding-top: 20px;
   padding-bottom: 40px;
   text-decoration: none;
-  border-top: 1px solid $gray;
+  border-top: 1px solid variables.$gray;
 
   &[theme="light"] {
     .post-card__title,
     .post-card__date,
     .post-card__summary {
-      color: $black;
+      color: variables.$black;
     }
   }
 
@@ -36,7 +37,7 @@
   padding-top: 20px;
   padding-bottom: 40px;
   text-decoration: none;
-  border-top: 1px solid $gray;
+  border-top: 1px solid variables.$gray;
 
   article {
     display: flex;
@@ -47,23 +48,23 @@
 
 .post-card__title {
   margin: 10px 0;
-  color: $mid-gray;
+  color: variables.$mid-gray;
 }
 
 .post-card__date {
-  color: $light-gray;
-  font-family: $font;
+  color: variables.$light-gray;
+  font-family: variables.$font;
   font-size: 0.8rem;
 }
 
 .post-card__summary {
   margin: 15px 0;
-  color: $light-gray;
-  font-family: $font;
+  color: variables.$light-gray;
+  font-family: variables.$font;
   font-size: 0.8rem;
 }
 
-@include medium {
+@include mixins.medium {
   .post-card__title {
     margin: 10px;
   }
@@ -77,7 +78,7 @@
   }
 }
 
-@include large {
+@include mixins.large {
   .post-card[first=true] {
     article {
       display: flex;
@@ -110,7 +111,7 @@
 }
 
 
-@include xlarge {
+@include mixins.xlarge {
 
   .post-card[first=true] {
     grid-column-start: 1;
