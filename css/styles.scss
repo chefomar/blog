@@ -1,7 +1,7 @@
 ---
 ---
-
-@import 'variables';
+@use "sass:meta";
+@use '../_sass/variables';
 
 * {
     box-sizing: border-box;
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-    background-color: $black;
+    background-color: variables.$black;
 }
 
 img {
@@ -37,14 +37,14 @@ blockquote {
 }
 
 @import 'splide-sea-green.min.css';
-@import '_sass/headings';
-@import '_sass/default-fonts';
-@import '_sass/header';
-@import '_posts-preview';
-@import '_books';
-@import '_sass/social';
-@import '_sass/container';
-@import '_sass/post_card';
-@import '_sass/post';
-@import '_sass/highlighter';
-@import '_sass/404';
+@include meta.load-css('../_sass/headings');
+@include meta.load-css('../_sass/default-fonts');
+@include meta.load-css('../_sass/header');
+@include meta.load-css('../_sass/_posts-preview');
+@include meta.load-css('../_sass/_books');
+@include meta.load-css('../_sass/social');
+@include meta.load-css('../_sass/container');
+@include meta.load-css('../_sass/post_card');
+@include meta.load-css('../_sass/post');
+@include meta.load-css('../_sass/highlighter');
+@include meta.load-css('../_sass/404');

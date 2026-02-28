@@ -1,4 +1,8 @@
-@import "variables";
+@use "sass:color";
+@use "variables";
+@use "mixins";
+@use "headings";
+
 
 .post__header {
   margin-top: 50px;
@@ -11,7 +15,7 @@
     display: block;
     margin: 50px 0;
     width: 50%;
-    border-bottom: 3px solid $mid-gray;
+    border-bottom: 3px solid variables.$mid-gray;
   }
 }
 
@@ -40,18 +44,18 @@
 }
 
 .post__title {
-  color: $mid-gray;
+  color: variables.$mid-gray;
 }
 
 .post__date {
-  font-family: $font;
-  color: $mid-gray;
+  font-family: variables.$font;
+  color: variables.$mid-gray;
 }
 
 .post__content {
-  font-family: $font;
+  font-family: variables.$font;
   line-height: 1.7;
-  background-color: $white;
+  background-color: variables.$white;
 
   h1 {
     @extend .heading;
@@ -84,17 +88,17 @@
   }
 
   h1,h2,h3,h4,h5,h6 {
-    color: $black;
+    color: variables.$black;
     margin-left: 0;
     margin-right: 0;
   }
 
   a {
-    color: darken($color: $blue, $amount: 5%);
+    color: color.adjust($color: variables.$blue, $lightness: -5%);
   }
 }
 
-@include xlarge {
+@include mixins.xlarge {
   .post__body,
   .post__header {
     margin-left: auto;

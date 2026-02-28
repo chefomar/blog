@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .social__link {
   text-decoration: none;
@@ -16,6 +16,6 @@
 .social__icon {
   width: 25px;
   height: 25px;
-  fill: $silver;
+  fill: variables.$silver;
   vertical-align: middle;
 }

@@ -1,4 +1,4 @@
-@import 'mixins';
+@use 'mixins';
 
 .container {
   display: flex;
@@ -32,7 +32,7 @@
   }
 }
 
-@include large {
+@include mixins.large {
   .container {
     padding-bottom: 0;
     width: 70vw;

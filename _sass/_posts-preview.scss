@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .posts-preview {
     display: grid;
     column-count: 1;
@@ -5,7 +8,7 @@
     width: 100%;
 }
 
-@include xlarge {
+@include mixins.xlarge {
     .posts-preview {
         column-gap: 50px;
         column-count: 2;
@@ -15,7 +18,7 @@
 }
 
 .white-container {
-    background-color: $white;
+    background-color: variables.$white;
 
     .posts-preview {
         :first-child {

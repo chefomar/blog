@@ -1,18 +1,18 @@
-@import "./mixins";
+@use "mixins";
 
 html,
 body {
   font-size: 100%;
 }
 
-@include medium {
+@include mixins.medium {
   html,
   body {
     font-size: 113%;
   }
 }
 
-@include large {
+@include mixins.large {
   html,
   body {
     font-size: 125%;

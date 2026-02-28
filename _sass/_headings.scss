@@ -1,5 +1,6 @@
-@import "variables";
-@import "mixins";
+@use "sass:map";
+@use "variables";
+@use "mixins";
 
 [theme="dark"] {
 
@@ -8,7 +9,7 @@
     &--underlined {
 
       &::after {
-        border-color: $mid-gray;
+        border-color: variables.$mid-gray;
       }
     }
   }
@@ -16,37 +17,37 @@
 
 .heading {
   margin: 10px;
-  font-family: $font;
+  font-family: variables.$font;
   text-transform: capitalize;
   letter-spacing: 2px;
 
   &--1 {
-    font-weight: map-get($map: $font-weights, $key: black);
+    font-weight: map.get($map: variables.$font-weights, $key: black);
     font-size: 1.7rem;
   }
 
   &--2 {
-    font-weight: map-get($map: $font-weights, $key: bold);
+    font-weight: map.get($map: variables.$font-weights, $key: bold);
     font-size: 1.5rem;
   }
 
   &--3 {
-    font-weight: map-get($map: $font-weights, $key: black);
+    font-weight: map.get($map: variables.$font-weights, $key: black);
     font-size: 1.3rem;
   }
 
   &--4 {
-    font-weight: map-get($map: $font-weights, $key: bold);
+    font-weight: map.get($map: variables.$font-weights, $key: bold);
     font-size: 1rem;
   }
 
   &--5 {
-    font-weight: map-get($map: $font-weights, $key: bold);
+    font-weight: map.get($map: variables.$font-weights, $key: bold);
     font-size: 0.8rem;
   }
 
   &--6 {
-    font-weight: map-get($map: $font-weights, $key: bold);
+    font-weight: map.get($map: variables.$font-weights, $key: bold);
     font-size: 0.8rem;
   }
 
@@ -60,7 +61,7 @@
       display: block;
       margin-top: 10px;
       width: 20%;
-      border-bottom: 3px solid $black;
+      border-bottom: 3px solid variables.$black;
     }
   }
 
@@ -69,7 +70,7 @@
   }
 }
 
-@include large {
+@include mixins.large {
   .heading {
     &--underlined {
       &::after {
